@@ -1,0 +1,284 @@
+######################
+# cli.containers[0]: #
+######################
+
+{'Created': 1450710967,
+'Id': 'c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631',
+'HostConfig':
+	{'NetworkMode': 'default'},
+'Labels':
+	{'com.docker.compose.project': 'docker',
+	'com.docker.compose.oneoff': 'False',
+	'com.docker.compose.config-hash': '8df926bd9a164dac34a45d58301ece4c755bcad7fce984bca03ea99aa2e9eb51',
+	'com.docker.compose.service': 'redis2',
+	'com.docker.compose.version': '1.4.2',
+	'com.docker.compose.container-number': '1'
+	},
+'ImageID': '06a1f75304ba07498873a8c2a0861c19c8994cf676714a891791fab8760fff6a',
+'Ports': [
+	{
+		'IP': '0.0.0.0',
+		'Type': 'tcp',
+		'PrivatePort': 16402,
+		'PublicPort': 16402
+	},
+	{
+		'IP': '0.0.0.0',
+		'Type': 'tcp',
+		'PrivatePort': 6402,
+		'PublicPort': 6402
+	},
+	{
+		'Type': 'tcp',
+		'PrivatePort': 6379
+	}
+],
+'Command': '/entrypoint.sh redis-server --cluster-enabled yes --appendonly no --port 6402',
+'Status': 'Up 11 days',
+'Image': 'registry.hub.docker.com/redis:3.0.0',
+'Names': [
+	'/redis_slave3'
+	]
+}
+###############################################
+# cli.inspect_container(cli.containers()[0]): #
+###############################################
+
+{
+'Mounts':
+    [
+        {
+            'RW': True,
+            'Source': '/var/lib/docker/volumes/dce524099fdfa93c0a34d69d1e65604431bc3b18d153505f3691276a4482dc0f/_data',
+            'Destination': '/data',
+            'Mode': '',
+            'Name': 'dce524099fdfa93c0a34d69d1e65604431bc3b18d153505f3691276a4482dc0f',
+            'Driver': 'local'
+        }
+    ],
+'RestartCount': 0,
+'ExecDriver': 'native-0.2',
+'Driver': 'aufs',
+'HostConfig':
+    {
+        'SecurityOpt': None,
+        'ConsoleSize': [0, 0],
+        'UTSMode': '',
+        'MemorySwap': 0,
+        'GroupAdd': None,
+        'Privileged': False,
+        'NetworkMode': 'default',
+        'LogConfig':
+            {
+                'Config': {},
+                'Type': 'json-file'
+            },
+        'OomKillDisable': False,
+        'CpuQuota': 0,
+        'KernelMemory': 0,
+        'CapDrop': None,
+        'Binds':
+            [
+            ],
+        'Ulimits': None,
+        'PublishAllPorts': False,
+        'CpusetCpus': '',
+        'ReadonlyRootfs': False,
+        'Dns':
+            [
+            ],
+        'DnsSearch':
+            [
+            ],
+        'CpuShares': 0,
+        'LxcConf': None,
+        'CapAdd': None,
+        'IpcMode': '',
+        'PidMode': '',
+        'MemoryReservation': 0,
+        'Memory': 0,
+        'ContainerIDFile': '',
+        'CgroupParent': '',
+        'CpusetMems': '',
+        'VolumeDriver': '',
+        'BlkioWeight': 0,
+        'Links': None,
+        'Devices': None,
+        'VolumesFrom':
+            [
+            ],
+        'ExtraHosts':
+            [
+            ],
+        'PortBindings':
+            {
+                '16402/tcp':
+                    [
+                        {
+                            'HostPort': '16402',
+                            'HostIp': ''
+                        }
+                    ],
+                '6402/tcp':
+                    [
+                        {
+                            'HostPort': '6402',
+                            'HostIp': ''
+                        }
+                    ]
+            },
+        'CpuPeriod': 0,
+        'MemorySwappiness': None,
+        'RestartPolicy':
+            {
+                'Name': '',
+                'MaximumRetryCount': 0
+            },
+        'DnsOptions':
+            [
+            ]
+    },
+'HostsPath': '/var/lib/docker/containers/c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631/hosts',
+'ExecIDs': None,
+'Config':
+    {
+        'Entrypoint':
+            [
+                '/entrypoint.sh'
+            ],
+        'OnBuild': None,
+        'Domainname': 'slave3.otlabs.fr',
+        'Image': 'registry.hub.docker.com/redis:3.0.0',
+        'Volumes':
+            {
+                '/data': {}
+            },
+        'Hostname': 'redis',
+        'StdinOnce': False,
+        'Labels':
+            {
+                'com.docker.compose.oneoff': 'False',
+                'com.docker.compose.version': '1.4.2',
+                'com.docker.compose.project': 'docker',
+                'com.docker.compose.config-hash': '8df926bd9a164dac34a45d58301ece4c755bcad7fce984bca03ea99aa2e9eb51',
+                'com.docker.compose.service': 'redis2',
+                'com.docker.compose.container-number': '1'
+            },
+        'Cmd':
+            [
+                'redis-server', '--cluster-enabled', 'yes', '--appendonly', 'no', '--port', '6402'
+            ],
+        'AttachStdout': False,
+        'AttachStderr': False,
+        'WorkingDir': '/data',
+        'ExposedPorts':
+            {
+                '16402/tcp': {},
+                '6402/tcp': {},
+                '6379/tcp': {}
+            },
+        'User': '',
+        'Tty': False,
+        'AttachStdin': False,
+        'Env':
+            [
+                'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+                'REDIS_VERSION=3.0.0',
+                'REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-3.0.0.tar.gz',
+                'REDIS_DOWNLOAD_SHA1=c75fd32900187a7c9f9d07c412ea3b3315691c65'
+            ],
+        'OpenStdin': False
+    },
+'LogPath': '/var/lib/docker/containers/c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631/c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631-json.log',
+'ResolvConfPath': '/var/lib/docker/containers/c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631/resolv.conf',
+'NetworkSettings':
+    {
+        'MacAddress': '02:42:ac:11:00:03',
+        'Ports':
+            {
+                '16402/tcp':
+                    [
+                        {
+                            'HostPort': '16402',
+                            'HostIp': '0.0.0.0'
+                        }
+                    ],
+                '6402/tcp':
+                    [
+                        {
+                            'HostPort': '6402',
+                            'HostIp': '0.0.0.0'
+                        }
+                    ],
+                '6379/tcp': None
+            },
+        'Gateway': '172.17.0.1',
+        'SandboxID': 'eefff4f21745ee40703478cada91f23c46f781bffaf298410dc60c5f838f7e51',
+        'LinkLocalIPv6Address': '',
+        'HairpinMode': False,
+        'IPPrefixLen': 16,
+        'Bridge': '',
+        'IPv6Gateway': '',
+        'EndpointID': '070954f19e6206bf5b901de72adaae71576bc6c55e8802bcc3a2c2c327cf0fbf',
+        'SecondaryIPAddresses': None,
+        'SecondaryIPv6Addresses': None,
+        'GlobalIPv6Address': '',
+        'IPAddress': '172.17.0.3',
+        'LinkLocalIPv6PrefixLen': 0,
+        'GlobalIPv6PrefixLen': 0,
+        'Networks':
+            {
+                'bridge':
+                    {
+                        'MacAddress': '02:42:ac:11:00:03',
+                        'EndpointID': '070954f19e6206bf5b901de72adaae71576bc6c55e8802bcc3a2c2c327cf0fbf',
+                        'IPv6Gateway': '',
+                        'GlobalIPv6Address': '',
+                        'IPPrefixLen': 16,
+                        'GlobalIPv6PrefixLen': 0,
+                        'Gateway': '172.17.0.1',
+                        'IPAddress': '172.17.0.3'
+                    }
+            },
+        'SandboxKey': '/var/run/docker/netns/eefff4f21745'
+    },
+'Image': '06a1f75304ba07498873a8c2a0861c19c8994cf676714a891791fab8760fff6a',
+'GraphDriver':
+    {
+        'Name': 'aufs',
+        'Data': None
+    },
+'Created': '2015-12-21T15:16:07.352447372Z',
+'Name': '/redis_slave3',
+'HostnamePath': '/var/lib/docker/containers/c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631/hostname',
+'Args':
+    [
+        'redis-server',
+        '--cluster-enabled',
+        'yes',
+        '--appendonly',
+        'no',
+        '--port',
+        '6402'
+    ],
+ProcessLabel': '',
+'State':
+    {
+        'Error': '',
+        'Paused': False,
+        'Status': 'running',
+        'OOMKilled': False,
+        'Dead': False,
+        'FinishedAt': '2015-12-23T14:45:05.500336114Z',
+        'StartedAt': '2015-12-23T14:45:32.16877918Z',
+        'ExitCode': 0,
+        'Pid': 14834,
+        'Restarting': False,
+        'Running': True
+    },
+'Path': '/entrypoint.sh',
+'Id': 'c4adcf29fcd64026f8e3addfff5f9b13804866bae8bba822d966eb2c8b202631',
+'MountLabel': '',
+'AppArmorProfile': ''
+}
+
