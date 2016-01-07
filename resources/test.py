@@ -62,7 +62,7 @@ def display_container_inspect(cont):
 
 print(cli.inspect_container(cli.containers()[0]))
 
-cli.
+
 
 # if isinstance(cli.containers(), list):
 #     list_loop(cli.containers())
