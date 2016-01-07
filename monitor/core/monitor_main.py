@@ -22,14 +22,7 @@ class MonitorMain(object):
     # password = ""
 
 
-
-    def __init__(self):
-        """ Manage the command line arguments """
-
-        self.args = self.parse_args()
-
-
-        example_of_use = "\
+    example_of_use = "\
 Examples of use:\n\
 \n\
 Monitor local machine (standalone mode):\n\
@@ -58,6 +51,11 @@ Start the client browser (browser mode):\n\
   $ glances --browser\n\
     "
 
+    def __init__(self):
+        """ Manage the command line arguments """
+
+        self.args = self.parse_args()
+
 
     def init_args(self):
         _version = "Monitor v" + version + " with docker-py v" + dockerpy_version
@@ -77,3 +75,4 @@ Start the client browser (browser mode):\n\
 
 
     def parse_args(self):
+        return 0
