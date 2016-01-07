@@ -2,6 +2,7 @@
 import argparse
 
 # Imports
+from monitor.core.
 from monitor.core.monitor_globals import appname, version, dockerpy_version
 
 class MonitorMain(object):
@@ -75,4 +76,8 @@ Start the client browser (browser mode):\n\
 
 
     def parse_args(self):
+
+        args = self.init_args().parse_args()
+
+        self.config =
         return 0
